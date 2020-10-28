@@ -1,0 +1,42 @@
+
+.card
+{
+    perspective: 150rem;
+    position: relative;
+    height: 30rem;
+    margin: auto;
+    width: 20rem;
+
+
+}
+.card__side
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s ease-out;
+    backface-visibility: hidden;
+    height: 30rem;
+    width: 100%;
+
+}
+.card__side--front
+{
+    background-color: orangered;
+
+}
+
+.card__side--back
+{
+    background-color: palegreen;
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--front
+{
+    transform: rotateY(180deg);
+}
+.card:hover .card__side--back
+{
+    transform: rotateY(0deg);
+}
